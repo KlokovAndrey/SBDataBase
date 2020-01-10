@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Greeting</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<form action="#" th:action="@{/greeting}" th:object="${person}" method="get">
+    <p><a href="add">Добавить</a></p>
+    <p><a href="search">Поиск</a></p>
+    <p><a href="sendMail">Отправить письмо</a></p>
+</form>
+</body>
+</html>

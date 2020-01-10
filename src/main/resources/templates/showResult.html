@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Result</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Найдено</h1>
+<form action="#" th:action="@{/showResult}" th:object="${person}" method="post">
+    <p>Фамилия: <input type="text" th:field="*{secondName}" /></p>
+    <p>Имя: <input type="text" th:field="*{firstName}" /></p>
+    <p>Отчество: <input type="text" th:field="*{thirdName}" /></p>
+    <p>Возраст: <input type="text" th:field="*{age}" /></p>
+    <p>Уровень зарплаты: <input type="text" th:field="*{salary}" /></p>
+    <p>Адрес электронной почты: <input type="text" th:field="*{email}" /></p>
+    <p>Место работы: <input type="text" th:field="*{placeWork}" /></p>
+    <p><h8 th:class="btn1" th:text="${time}" ></h8></p>
+    <p><h8 th:class="btn1" th:text="'User Agent: ' + ${userAgent}"></h8></p>
+    <p><a href="sendMail">Отправить письмо</a></p>
+</form>
+</body>
+</html>
